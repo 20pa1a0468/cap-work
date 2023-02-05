@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    String [] b = new String[a];
+    for(int i = 0;i<a;i++){
+        b[i] = sc.next();
+    }
+    int c = sc.nextInt();
+    String [] d = new String[c];
+    for(int i = 0;i<c;i++){
+        d[i] = sc.next();
+    }
+    int [] e = new int[c];
+    int count = 0; 
+    for(int i = 0;i<c;i++){
+        for(int j = 0;j<a;j++){
+            if(d[i].equals(b[j])){
+                count = count + 1;
+            }
+            
+        }
+        e[i] = count;
+        count = 0;
+    }
+    for(int i = 0;i<c;i++){
+        System.out.println(e[i]);
+    }
+    }
+}
