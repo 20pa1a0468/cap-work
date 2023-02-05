@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class a {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            String a = sc.nextLine();
+            int b = a.length();
+            String c  = a.substring(0,2);
+            int d = Integer.parseInt(c);
+            if (a.charAt(0) == '1' && a.charAt(1) == '2' && a.charAt(8) == 'A') {
+                a = "00" + a.substring(2, b - 2);
+                System.out.println(a);
+            } 
+            else if (a.charAt(0) == '0' && a.charAt(8) == 'A') {
+                a = a.substring(0, 8);
+                System.out.println(a);
+            }
+            else if(a.charAt(0) == '1'&&a.charAt(8)=='A'){
+                a = a.substring(0, 8);
+                System.out.println(a);
+
+            } 
+            else if(a.charAt(0) == '1'&&a.charAt(1) == '2'&&a.charAt(8)=='P'){
+                a = a.substring(0, 8);
+                System.out.println(a);
+            }
+            else if(a.charAt(0) == '0'&&a.charAt(8) == 'P'){
+                d = d + 12;
+                System.out.println(d + a.substring(2,8));
+            }   
+            else{
+                d = d + 12;
+                System.out.println(d + a.substring(2,8));
+            }
+}
+    }
