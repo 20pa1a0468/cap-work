@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class practice{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+       String a = sc.nextLine();
+       HashSet<Character> b = new HashSet<>();
+       ArrayList <Character> d = new ArrayList<>();
+       String e = "";
+       for(int i = 0;i<a.length();i++){
+        b.add(a.charAt(i));
+       }
+       for(char c : b){
+     
+        d.add(c);
+       }
+       for(int i = 0;i<d.size();i++){
+      
+       }
+      for(int i = 0;i<a.length();i++){
+        for(int j = 0;j<d.size();j++){
+            if(a.charAt(i) == d.get(j)){
+                e = e + a.charAt(i);
+                d.remove(j);
+            }
+        }
+      }
+      System.out.println(e);
+}    
+}
